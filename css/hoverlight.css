@@ -1,0 +1,61 @@
+*{margin: 0;padding: 0;}
+			body
+			{
+				background: #2c3a47;
+			}
+.content{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.list{
+	list-style: none;
+	display: flex;
+	width: 600px;
+	height: 100px;
+}
+.list li{
+	width: 100px;
+	height: 100px;
+	list-style: none;
+	margin: 0px 18px;
+}
+.svg_icon{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left:15px;
+	top:15px;
+}
+.list li a{
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	transition: 0.6s;
+}
+
+/* .list li a:hover{
+	box-shadow: 0 0 14px 2px #25ccf7;
+} */
+
+
+/* 通过伪元素实现动态光效 */
+.list li a::before{
+	content:"";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #2c3a47;
+	transform: scale(0.8);
+	transition: 0.6s;
+	z-index: -1;
+}
+.list li a:hover::before{
+	box-shadow: 0 0 14px 2px #25ccf7;
+	transform: scale(1.05);
+}
