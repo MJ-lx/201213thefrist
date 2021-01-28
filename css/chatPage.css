@@ -1,0 +1,139 @@
+body{font-family: "仿宋";}
+ul,li{margin: 0;padding: 0;}
+.contain{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.page{
+	width: 375px;
+	height: 812px;
+	box-shadow: 0px 4px 16px rgba(0,0,0,0.9);
+	margin: 48px 0px;
+}
+/* 背景 */
+.main{
+	background-color: #0061c4;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.button{
+	display: flex;
+	margin: 0 12px;
+	margin-top: 20px;
+	justify-content: space-between;
+}
+.button img {
+	width: 20px;
+	height: 20px;
+}
+.menu{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.menu li{
+	list-style: none;
+	color: rgba(255,255,255,0.68);
+	font-size: 18px;
+	margin: 48px 12px 10px 12px;
+}
+.menu li:nth-of-type(1){
+	color: white;
+}
+
+/* 常用联系人 */
+.connect{
+	background-color: #f2f8fc;
+	border-radius: 34px;
+	padding: 30px 24px 100px 24px;
+	margin-bottom: -90px;
+}
+.favorite_menu{
+	display: flex;
+	justify-content: space-between;
+}
+.favorite_menu span{
+	color: :#6f6f6f;
+	font-size: 16px;
+}
+.people{
+	display: flex;
+	justify-content: space-between;
+	overflow: auto;
+	margin-right: -20px;
+	flex-shrink: 0; /* flex-shrink 属性指定了 flex 元素的收缩规则。 */
+}
+.profile{
+	text-align: center;
+	padding: 20px 10px 0px 20px;
+}
+.favorite_img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+/* 其实它们是为了处理替换元素（replaced elements）的自适应问题，
+	简单的说，就是处理替换元素的变形（这里指长宽比例变形）问题。 */
+	object-fit: cover;
+	object-position: center;
+}
+.profile div
+{
+	font-size: 14px;
+	color: #a5a9ad;
+	margin-top: 6px;
+}
+/* 聊天面板 */
+.news{
+	background-color: white;
+	position: relative;
+	border-radius: 48px 48px 0 0;
+	overflow: hidden;
+	display: flex;
+	max-height: 500px;
+}
+.mask{
+	width: 100%;
+	height: 64px;
+	border-radius: 48px 48px 0 0;
+	background-image: linear-gradient(180deg,rgba(255,255,255,1) 0%,
+	rgba(255,255,255,0.6) 60%,
+	rgba(255,255,255,0) 100%);
+	position: absolute;
+}
+.messages{
+	overflow: auto;
+	padding-right: 12px;
+	padding-bottom: 24px;
+}
+.message{
+	display: flex;
+	align-items: center;
+	padding: 10px 12px 10px 24px;
+}
+.info{
+	flex: 4;
+	color: #a5a9ad;
+	padding-left: 20px;
+	font-size: 14px;
+	min-width: 0px;
+}
+ .info .name{
+	padding-bottom: 8px;
+}
+.info .content{
+	color: #657081;
+/* text-overflow 文本无法完全显示  默认clip */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.message .time{
+	flex: 1;
+	font-size: 14px;
+	color: #858a98;
+	padding-top: 4px;
+	align-self: flex-start;
+	text-align: right;
+}

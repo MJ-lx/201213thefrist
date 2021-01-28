@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	font-family: "微软雅黑";
+	width: 100%;
+	height: 100%;
+}
+.contain{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #2f3542;
+}
+.canva{
+	width: 240px;
+	height: 60px;
+	position: relative;
+	align-items: center;
+}
+.rectangle{
+	stroke: #ffb348;
+	stroke-width: 8;
+	fill: transparent;
+	stroke-dasharray: 100 500;
+	stroke-dashoffset: -374;
+}
+.but{
+	color: #F2F8FC;
+	position: relative;
+	top: -46px;
+	left: 95px;
+	font-size: 18px;
+	letter-spacing: 6px;/* 字符间距 */
+}
+
+@keyframes extend{
+	to{
+		stroke-dasharray: 600 100;
+		stroke-width: 2;
+		stroke-dashoffset: 0;
+	}
+}
+.canva:hover .rectangle{
+	animation: 0.5s extend linear forwards;
+	/* forward保持动画最终呈现状态 */
+}
+
+/* 添加发光效果 */
+.canva::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:agba(255,255,255,0);
+	transition: 0.5s linear;
+
+}
+.canva:hover::before{
+	box-shadow: 0 0 10px 2px #ffb369;
+}

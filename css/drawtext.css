@@ -1,0 +1,34 @@
+html,body{
+	background: #2f3542;
+	width: 100%;
+	height: 100%;
+}
+
+.contain{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+/* SVG stroke 文字描边属性 */
+.main_text{
+	font-family: "宋体";
+	font-size: 96px;
+	fill:none;
+	/* stroke: #ffffff; */
+	stroke: url(#geekColor);
+	stroke-width: 1;
+	stroke-dasharray: 10 800;
+	stroke-dashoffset: 10;
+	animation: 3s linear 0s drawing forwards;
+}
+
+
+@keyframes  drawing{
+	to{
+		stroke-dasharray: 800;
+		stroke-dashoffset: 0;
+	}
+}
